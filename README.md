@@ -1,4 +1,4 @@
-# Polygon CDK/zkEVM Blockscout Package
+# Attractor CDK/zkEVM Blockscout Package
 This is a Kurtosis based stack to deploy Blockscout on arbitrary CDK/zkEVM based chain.
 
 ## Configuration

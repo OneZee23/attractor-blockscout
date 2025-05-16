@@ -21,8 +21,52 @@ def run(plan, cfg, stack_info):
         "PORT": str(service_port),
         ## Blockchain configuration.
         # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#blockchain-parameters
-        "NEXT_PUBLIC_NETWORK_NAME": title,
+        "NEXT_PUBLIC_NETWORK_NAME": "Attractor",
+        "NEXT_PUBLIC_NETWORK_SHORT_NAME": "Attractor",
+        "NEXT_PUBLIC_NETWORK_VERIFICATION_TYPE": "validation",
+        ## TODO: вынести в настраеваемые параметры
+        "NEXT_PUBLIC_IS_TESTNET": "true",
         "NEXT_PUBLIC_NETWORK_ID": str(chain_id),
+
+        ## Gas native coin configuration
+        "NEXT_PUBLIC_NETWORK_CURRENCY_NAME": "Ether",
+        "NEXT_PUBLIC_NETWORK_CURRENCY_WEI_NAME": "Wei",
+        "NEXT_PUBLIC_NETWORK_CURRENCY_DECIMALS": "18",
+        "NEXT_PUBLIC_NETWORK_TOKEN_STANDARD_NAME": "ERC",
+
+        ## Gas ERC-20 token configuration
+        "NEXT_PUBLIC_NETWORK_SECONDARY_COIN_SYMBOL": "ATTRA",
+        "NEXT_PUBLIC_NETWORK_MULTIPLE_GAS_CURRENCIES": "true",
+
+        ## UI configuration
+        # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#ui-configuration
+        ### Homepage configuration
+        "NEXT_PUBLIC_HOMEPAGE_CHARTS": ["daily_txs", "daily_operational_txs", "coin_price", "secondary_coin_price"],
+        "NEXT_PUBLIC_HOMEPAGE_HERO_BANNER_CONFIG": {
+            "background": [
+                "radial-gradient(ellipse at center, #3a1c71 0%, #d76d77 100%), #fff",  # светлая тема
+                "radial-gradient(ellipse at center, #1a002b 0%, #0a001a 100%), #0a001a"  # тёмная тема
+            ],
+            "text_color": [
+                "#1a002b",
+                "#DCFE76"
+            ]
+        },
+        ### Navigation configuration
+        "NEXT_PUBLIC_NETWORK_LOGO": "https://storage.googleapis.com/blockchain-networks/static/attra/chain.png",
+        "NEXT_PUBLIC_NETWORK_LOGO_DARK": "https://storage.googleapis.com/blockchain-networks/static/attra/chain.png",
+        "NEXT_PUBLIC_NETWORK_ICON": "https://storage.googleapis.com/blockchain-networks/static/attra/chain-small.png",
+        "NEXT_PUBLIC_NETWORK_ICON_DARK": "https://storage.googleapis.com/blockchain-networks/static/attra/chain-small.png",
+        
+        # TODO: возможно стоит сконфигурировать ссылки (футер, хедер, others)
+
+        ### Favicon configuration
+        "FAVICON_MASTER_URL": "https://storage.googleapis.com/blockchain-networks/static/attra/chain-small.png",
+
+        ### Metadata configuration
+        "NEXT_PUBLIC_PROMOTE_BLOCKSCOUT_IN_TITLE": "false",
+        "NEXT_PUBLIC_OG_DESCRIPTION": "Attractor is a blockchain explorer for the Attractor network.",
+
         # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#rollup-chain
         "NEXT_PUBLIC_ROLLUP_TYPE": "zkEvm",
         "NEXT_PUBLIC_ROLLUP_L1_BASE_URL": l1_explorer,
@@ -52,9 +96,12 @@ def run(plan, cfg, stack_info):
         "NEXT_PUBLIC_AD_BANNER_PROVIDER": "none",
         # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#text-ads
         "NEXT_PUBLIC_AD_TEXT_PROVIDER": "none",
+
+        # TODO: добавить
+        # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#bridged-tokens
     }
     if swap_url:
-        swap_item = {"text": "Polygon zkEVM Bridge", "icon": "swap", "url": swap_url}
+        swap_item = {"text": "Attractor Bridge", "icon": "swap", "url": swap_url}
         env_vars["NEXT_PUBLIC_DEFI_DROPDOWN_ITEMS"] = json.encode([swap_item])
 
     service = plan.add_service(
