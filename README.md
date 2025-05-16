@@ -4,6 +4,7 @@ This is a Kurtosis based stack to deploy Blockscout on arbitrary CDK/zkEVM based
 ## Configuration
 Be sure to have Kurtosis installed on you computer: https://docs.kurtosis.com/install/
 
+
 Create a params.yaml with config params
 ### Required params
 - rpc_url: RPC URL
