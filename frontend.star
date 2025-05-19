@@ -41,8 +41,8 @@ def run(plan, cfg, stack_info):
         ## UI configuration
         # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#ui-configuration
         ### Homepage configuration
-        # "NEXT_PUBLIC_HOMEPAGE_CHARTS": str(["daily_txs", "daily_operational_txs", "coin_price", "secondary_coin_price"]),
-        "NEXT_PUBLIC_HOMEPAGE_HERO_BANNER_CONFIG": {
+        "NEXT_PUBLIC_HOMEPAGE_CHARTS": str(["daily_txs", "daily_operational_txs", "coin_price", "secondary_coin_price"]),
+        "NEXT_PUBLIC_HOMEPAGE_HERO_BANNER_CONFIG": json.encode({
             "background": [
                 "radial-gradient(ellipse at center, #3a1c71 0%, #d76d77 100%), #fff",  # светлая тема
                 "radial-gradient(ellipse at center, #1a002b 0%, #0a001a 100%), #0a001a"  # тёмная тема
@@ -104,7 +104,6 @@ def run(plan, cfg, stack_info):
         swap_item = {"text": "Attractor Bridge", "icon": "swap", "url": swap_url}
         env_vars["NEXT_PUBLIC_DEFI_DROPDOWN_ITEMS"] = json.encode([swap_item])
 
-    # env_vars["NEXT_PUBLIC_HOMEPAGE_CHARTS"] = json.encode(["daily_txs", "daily_operational_txs", "coin_price", "secondary_coin_price"])
     service = plan.add_service(
         name=service_name,
         config=ServiceConfig(
