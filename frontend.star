@@ -104,7 +104,7 @@ def run(plan, cfg, stack_info):
         swap_item = {"text": "Attractor Bridge", "icon": "swap", "url": swap_url}
         env_vars["NEXT_PUBLIC_DEFI_DROPDOWN_ITEMS"] = json.encode([swap_item])
 
-    env_vars["NEXT_PUBLIC_HOMEPAGE_CHARTS"] = json.encode(["daily_txs", "daily_operational_txs", "coin_price", "secondary_coin_price"])
+    # env_vars["NEXT_PUBLIC_HOMEPAGE_CHARTS"] = json.encode(["daily_txs", "daily_operational_txs", "coin_price", "secondary_coin_price"])
     service = plan.add_service(
         name=service_name,
         config=ServiceConfig(
