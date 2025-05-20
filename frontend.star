@@ -53,15 +53,15 @@ def run(plan, cfg, stack_info):
             ]
         },
         ### Navigation configuration
-        "NEXT_PUBLIC_NETWORK_LOGO": "https://storage.googleapis.com/blockchain-networks/static/attra/chain.png",
-        "NEXT_PUBLIC_NETWORK_LOGO_DARK": "https://storage.googleapis.com/blockchain-networks/static/attra/chain.png",
-        "NEXT_PUBLIC_NETWORK_ICON": "https://storage.googleapis.com/blockchain-networks/static/attra/chain-small.png",
-        "NEXT_PUBLIC_NETWORK_ICON_DARK": "https://storage.googleapis.com/blockchain-networks/static/attra/chain-small.png",
+        "NEXT_PUBLIC_NETWORK_LOGO": str("https://storage.googleapis.com/blockchain-networks/static/attra/chain.png"),
+        "NEXT_PUBLIC_NETWORK_LOGO_DARK": str("https://storage.googleapis.com/blockchain-networks/static/attra/chain.png"),
+        "NEXT_PUBLIC_NETWORK_ICON": str("https://storage.googleapis.com/blockchain-networks/static/attra/chain-small.png"),
+        "NEXT_PUBLIC_NETWORK_ICON_DARK": str("https://storage.googleapis.com/blockchain-networks/static/attra/chain-small.png"),
         
         # TODO: возможно стоит сконфигурировать ссылки (футер, хедер, others)
 
         ### Favicon configuration
-        "FAVICON_MASTER_URL": "https://storage.googleapis.com/blockchain-networks/static/attra/chain-small.png",
+        "FAVICON_MASTER_URL": str("https://storage.googleapis.com/blockchain-networks/static/attra/chain-small.png"),
 
         ### Metadata configuration
         "NEXT_PUBLIC_PROMOTE_BLOCKSCOUT_IN_TITLE": "false",
