@@ -51,7 +51,7 @@ def run(plan, cfg, stack_info):
                 "#1a002b",
                 "#DCFE76"
             ]
-        },
+        }),
         ### Navigation configuration
         "NEXT_PUBLIC_NETWORK_LOGO": str("https://storage.googleapis.com/blockchain-networks/static/attra/chain.png"),
         "NEXT_PUBLIC_NETWORK_LOGO_DARK": str("https://storage.googleapis.com/blockchain-networks/static/attra/chain.png"),
