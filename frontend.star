@@ -23,6 +23,7 @@ def run(plan, cfg, stack_info):
         # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#blockchain-parameters
         "NEXT_PUBLIC_NETWORK_NAME": "Attractor",
         "NEXT_PUBLIC_NETWORK_SHORT_NAME": "Attractor",
+        "NEXT_PUBLIC_NETWORK_VERIFICATION_TYPE": "mining",
         ## TODO: вынести в настраеваемые параметры
         "NEXT_PUBLIC_IS_TESTNET": "true",
         "NEXT_PUBLIC_NETWORK_ID": str(chain_id),
@@ -76,6 +77,11 @@ def run(plan, cfg, stack_info):
         "NEXT_PUBLIC_API_HOST": api_host,
         "NEXT_PUBLIC_API_PORT": api_port,
         "NEXT_PUBLIC_API_WEBSOCKET_PROTOCOL": "ws",
+        "NEXT_PUBLIC_USE_NEXT_JS_PROXY": "false",
+        
+        ## Disable real-time updates
+        "NEXT_PUBLIC_HIDE_INDEXING_ALERT_BLOCKS": "true",
+        "NEXT_PUBLIC_HIDE_INDEXING_ALERT_INT_TXS": "true",
         # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#blockchain-statistics
         "NEXT_PUBLIC_STATS_API_HOST": "http://{}:{}".format(
             stack_info["stats_host"], stack_info["stats_port"]
@@ -88,7 +94,6 @@ def run(plan, cfg, stack_info):
         "NEXT_PUBLIC_APP_PROTOCOL": "http",
         "NEXT_PUBLIC_APP_HOST": service_ip or "127.0.0.1",
         "NEXT_PUBLIC_APP_PORT": str(service_port),
-        "NEXT_PUBLIC_USE_NEXT_JS_PROXY": "true",
         ## Remove ads.
         # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#banner-ads
         "NEXT_PUBLIC_AD_BANNER_PROVIDER": "none",
