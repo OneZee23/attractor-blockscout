@@ -23,7 +23,6 @@ def run(plan, cfg, stack_info):
         # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#blockchain-parameters
         "NEXT_PUBLIC_NETWORK_NAME": "Attractor",
         "NEXT_PUBLIC_NETWORK_SHORT_NAME": "Attractor",
-        "NEXT_PUBLIC_NETWORK_VERIFICATION_TYPE": "mining",
         ## TODO: вынести в настраеваемые параметры
         "NEXT_PUBLIC_IS_TESTNET": "true",
         "NEXT_PUBLIC_NETWORK_ID": str(chain_id),
