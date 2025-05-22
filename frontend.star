@@ -76,11 +76,7 @@ def run(plan, cfg, stack_info):
         "NEXT_PUBLIC_API_HOST": api_host,
         "NEXT_PUBLIC_API_PORT": api_port,
         "NEXT_PUBLIC_API_WEBSOCKET_PROTOCOL": "ws",
-        "NEXT_PUBLIC_USE_NEXT_JS_PROXY": "false",
-        
-        ## Disable real-time updates
-        "NEXT_PUBLIC_HIDE_INDEXING_ALERT_BLOCKS": "true",
-        "NEXT_PUBLIC_HIDE_INDEXING_ALERT_INT_TXS": "true",
+        "NEXT_PUBLIC_USE_NEXT_JS_PROXY": "true",
         # https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#blockchain-statistics
         "NEXT_PUBLIC_STATS_API_HOST": "http://{}:{}".format(
             stack_info["stats_host"], stack_info["stats_port"]

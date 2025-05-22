@@ -12,8 +12,7 @@ IMAGE_FRONTEND = "ghcr.io/blockscout/frontend:v1.38.1"
 def get_config(args, db_host=None, get_db_configs=False):
     deployment_suffix = args.get("deployment_suffix", "")
     common_args = args | {
-        # TODO: нужно будет задать swap_url переменную в конфиге когда будет DNS
-        "swap_url": args.get("swap_url", "http://127.0.0.1:32841"),
+        "swap_url": args.get("swap_url", "https://app.uniswap.org/#/swap"),
         "l1_explorer": args.get("l1_explorer", "https://sepolia.etherscan.io/"),
         "l1_rpc_url": args.get("l1_rpc_url", "https://rpc2.sepolia.org/"),
         "backend_exposed": args.get("blockscot_backend_port", False),
